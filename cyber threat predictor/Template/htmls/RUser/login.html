@@ -44,10 +44,10 @@
 						<fieldset>
                              {% load static %}
 						<img src="{% static '/login.jpg' %}" alt="My image">
-							<p class="style5"> Login Using Your Account: </p>
+							<p class="style5"> Login to your account: </p>
 
 							<div class="form-group">
-								<input type="text" name="username"   placeholder="User Name" required>
+								<input type="text" name="username"   placeholder="UserName" required>
 							</div>
 							<div class="form-group">
 								<input type="password" name="password"   placeholder="Password" required>
@@ -56,12 +56,12 @@
 								<input type="submit" name="submit1"  class="btn btn-md" value="Login">
 							</div></br>
 
-							<p class="style5"> Login Using Your Account: </p>
+							<p class="style5"> Login to your account: </p>
 
 							<div>
 
-							<button class="btn btn-lg "><a href="{% url 'serviceproviderlogin' %}">SERVICE PROVIDER</a></button>
-                                <button class="btn btn-lg "><a href="{% url 'Register1' %}">REGISTER</a></button>
+							<button class="btn btn-lg "><a href="{% url 'serviceproviderlogin' %}">Service Provider</a></button>
+                                <button class="btn btn-lg "><a href="{% url 'Register1' %}">Register</a></button>
  							</div>
  						</fieldset>
 				</form>
