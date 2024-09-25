@@ -1,0 +1,41 @@
+body {
+  background-color: #000000;
+}
+
+.container-fluid {
+  padding: 50px;
+}
+.container {
+  background-color: white;
+  padding: 50px;
+}
+#title {
+}
+.text-uppercase {
+}
+.tweettext {
+  border: 2px solid #f7f7f7;
+  width: 904px;
+  height: 202px;
+  overflow: scroll;
+  background-color: #2b0dbd;
+}
+.style1 {
+  color: blue;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.style6 {
+  font-size: 24px;
+  color: #f7f7f7;
+  font-weight: bold;
+}
+.style8 {
+  color: #f7f7f7;
+  font-weight: bold;
+}
+.style9 {
+  color: #f7f7f7;
+  font-size: 24px;
+  font-weight: bold;
+}
