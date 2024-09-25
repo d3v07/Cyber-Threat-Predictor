@@ -1,0 +1,73 @@
+{% extends 'RUser/design.html' %} {% block userblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css?family=Righteous"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Fredoka+One"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="ViewYourProfile.css" />
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <form role="form" method="POST">
+            {% csrf_token %}
+            <fieldset>
+              <p class="text-uppercase pull-center style1">
+                Profile Details
+              </p>
+              <hr />
+              <div class="form-group">
+                <p>
+                  <span class="style1">UserName</span> = {{object.username}}
+                </p>
+              </div>
+
+              <div class="form-group">
+                <p><span class="style1">Email</span> = {{object.email}}</p>
+              </div>
+
+              <div class="form-group">
+                <p>
+                  <span class="style1">Password</span> = {{object.password}}
+                </p>
+              </div>
+
+              <div class="form-group">
+                <p>
+                  <span class="style1">Mobile Number</span> = {{object.phoneno}}
+                </p>
+              </div>
+
+              <div class="form-group">
+                <p><span class="style1">Country</span> = {{object.country}}</p>
+              </div>
+
+              <div class="form-group">
+                <p><span class="style1">State</span> = {{object.state}}</p>
+              </div>
+
+              <div class="form-group">
+                <p><span class="style1">City</span> = {{object.city}}</p>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="col-md-2">
+          <!-------null------>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</body>
