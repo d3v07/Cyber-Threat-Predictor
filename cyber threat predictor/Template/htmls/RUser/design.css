@@ -1,0 +1,36 @@
+body {
+  background: url("{% static 'bg.jpg' %}");
+  background-size: cover;
+  font-weight: bold;
+  background-color: skyblue;
+}
+h1 {
+  color: white;
+}
+.topnav {
+  overflow: hidden;
+  background-color: blue
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #8e4fd1;
+  color: white;
+}
+.style1 {
+    color: blue;
+  font-weight: bold;
+}
