@@ -1,0 +1,79 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<title>Register Your Details</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+    <link rel="stylesheet" href="Register1.css" />
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div>
+            <h1 class="text-center style1" id="title">Cyber Threat Predictor</h1>
+            <p class="text-center"></p>
+            <hr>
+
+            <!-- Centered Form Group -->
+            <div class="row">
+                <div class="col-md-12 form-container">
+                    <form role="form" method="POST">
+                        {% csrf_token %}
+                        <fieldset>
+                            {% load static %}
+                            <img src="{% static '/Register.jpg' %}" alt="My image"><br>
+                            <span class="style2">REGISTER YOUR DETAILS HERE !!!</span>
+                            <div class="form-group">
+                                <input type="text" name="username" id="username" placeholder="User Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="phoneno" id="phoneno" placeholder="Mobile Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="country" id="country" placeholder="Country" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="state" id="state" placeholder="State" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="city" id="city" placeholder="City" required>
+                            </div>
+
+                            <div>
+                                <input type="submit" class="btn btn-lg btn-primary" name="submit" value="Register">
+                            </div>
+                        </fieldset>
+                        <div><br>
+                            <button class="btn btn-lg "><a href="{% url 'login' %}">User Login</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
