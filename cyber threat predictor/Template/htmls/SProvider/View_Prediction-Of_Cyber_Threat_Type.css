@@ -1,0 +1,32 @@
+body {
+    background-color: #000000;
+}
+
+.container-fluid {
+    padding: 50px;
+}
+
+.container {
+    background-color: white;
+    padding: 50px;
+}
+
+.tweettext {
+
+    border: 2px solid rgb(27, 175, 212);
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+ 
+}
+
+.style1 {
+    color: blue;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.style12 {
+    color: #FFFF00;
+    font-weight: bold;
+}
