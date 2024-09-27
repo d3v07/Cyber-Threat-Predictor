@@ -1,0 +1,31 @@
+body {
+    background-color: #000000;
+}
+
+.container-fluid {
+    padding: 50px;
+}
+
+.container {
+    background-color: white;
+    padding: 50px;
+}
+
+#title {
+    
+}
+
+.text-uppercase {
+    
+}
+
+input {
+
+    font-size: 15px;
+}
+
+.style1 {
+    color: blue;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+}
