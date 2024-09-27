@@ -1,0 +1,53 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<link rel="stylesheet" href="View_Remote_Users.css">
+<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+					<form role="form" method="POST">
+						{% csrf_token %}
+						<fieldset>
+							<centre>
+								<p class="text-uppercase pull-center style1" style="padding-left: 42.67%;""> View All Remote Users </p></centre>
+                            <div class=" viewclients">
+								<table border="5" align="center" bordercolor="##1558bd">
+									<tr>
+										<th bgcolor="##1558bd" style="color:yellow">Username</th>
+										<th bgcolor="##1558bd" style="color:yellow">Email ID</th>
+										<th bgcolor="##1558bd" style="color:yellow">Mobile No</th>
+										<th bgcolor="##1558bd" style="color:yellow">Country</th>
+										<th bgcolor="##1558bd" style="color:yellow">State</th>
+										<th bgcolor="##1558bd" style="color:yellow">City</th>
+									</tr>
+									<tr>
+										{% for o in objects %}
+										<td bgcolor="#FFFFFF" style="color:blue">{{o.username}}</td>
+										<td bgcolor="#FFFFFF" style="color:blue">{{o.email}}</td>
+										<td bgcolor="#FFFFFF" style="color:blue">{{o.phoneno}}</td>
+										<td bgcolor="#FFFFFF" style="color:blue">{{o.country}}</td>
+										<td bgcolor="#FFFFFF" style="color:blue">{{o.state}}</td>
+										<td bgcolor="#FFFFFF" style="color:blue">{{o.city}}</td>
+									</tr>
+									{% endfor %}
+								</table>
+
+				</div>
+				</fieldset>
+				</form>
+			</div>
+
+			<div class="col-md-2">
+				<!-------null------>
+			</div>
+		</div>
+	</div>
+	</div>
+	{% endblock %}
