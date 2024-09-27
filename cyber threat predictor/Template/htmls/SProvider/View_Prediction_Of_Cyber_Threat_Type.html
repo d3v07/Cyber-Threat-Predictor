@@ -1,0 +1,173 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<link rel="stylesheet" href="View_Prediction-Of_Cyber_Threat_Type.css">
+
+<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+					<form role="form" method="POST">
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View Cyber Threat Prediciton</p>
+							<hr>
+							<div>
+								<table width="739" border="5" align="center" bordercolor="#acbd15">
+									<tr>
+										<!-- label  -->
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span class="style8 style6">Packet ID</span>
+											</div>
+										</td>
+										<!-- value -->
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.pid}}</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span class="style8 style6">Packet Time</span>
+											</div>
+										</td>
+
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+										<div align="left">{{object.ptime}}</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Source IP Address</span></div>
+										</td>
+
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.src_ip_address}}</div>
+										</td>
+									</tr>
+
+									<tr>
+
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Destination IP Address</span></div>
+										</td>
+
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.dst_ip_address}}</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Frame Protocol</span></div>
+										</td>
+
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.frame_protos}}</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Source Port</span></div>
+										</td>
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.src_port}}</div>
+										</td>
+
+									</tr>
+									<tr>
+
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Destination Port</span></div>
+										</td>
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.dst_port}}</div>
+										</td>
+									</tr>
+
+									<tr>
+
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Bytes Transferred</span></div>
+										</td>
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.bytes_trans}}</div>
+										</td>
+									</tr>
+
+									<tr>
+
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Protocol</span></div>
+										</td>
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+										<div align="left">{{object.protocol}}</div>
+										</td>
+									</tr>
+
+									<tr>
+
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span class="style8 style6">Date</span>
+											</div>
+										</td>
+
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.Date1}}</div>
+										</td>
+									</tr>
+
+									<tr>
+
+										<td width="366" bgcolor="#1558bd">
+											<div align="center" class="style12"><span
+													class="style8 style6">Prediction</span></div>
+										</td>
+										<td bgcolor="#FFFFFF" style="color:blue; font-size:20px; font-family:fantasy">
+											<div align="left">{{object.Prediction}}</div>
+										</td>
+									</tr>
+
+									</tr>
+									{% for object in list_objects %}
+									<tr>
+
+									</tr>
+
+									{% endfor %}
+								</table>
+
+							</div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+	<tr>
