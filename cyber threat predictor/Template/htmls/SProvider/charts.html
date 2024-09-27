@@ -1,34 +1,8 @@
-<script >
-    window.onload = function() {
+<head>
+    <link rel="stylesheet" href="charts.css">
+   
+</head>
     
-    var chart = new CanvasJS.Chart("chartContainer", {
-        animationEnabled: true,
-        title: {
-            text: ""
-        },
-        data: [{
-        {% if chart_type == "line" %}
-            type: "line",
-        {% elif chart_type == "pie" %}
-            type: "pie",
-        {% elif chart_type == "spline" %}
-            type: "spline",
-        {% endif %}
-            startAngle: 240,
-            yValueFormatString: "##0.00\"%\"",
-            indexLabel: "{label} {y}",
-            dataPoints: [
-            {% for o in form %}
-                {y: {{o.dcount}}, label: "{{o.names}}"},
-            {% endfor %}
-            ]
-        }]
-    });
-    chart.render();
-    
-    }
-    
-    </script>
     <body>
     <br>
     <div class="topic">
@@ -46,6 +20,7 @@
     </div>
     <div id="chartContainer" class="graph"></div>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="charts.js"></script>
     </div>
     
     </body>

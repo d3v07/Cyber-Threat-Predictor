@@ -1,0 +1,26 @@
+body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{
+                font-family: 'Times New Roman', Times, serif;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:white;
+}
+		.style1 {
+	color: blue;
+	font-weight: bold;
+	background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+.style7 {color: #000000}
