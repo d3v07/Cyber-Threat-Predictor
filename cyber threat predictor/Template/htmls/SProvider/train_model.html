@@ -21,7 +21,7 @@
  					<form role="form" method="POST" >
 						{% csrf_token %}
 						<fieldset>
-                            <p align="center" class="text-uppercase pull-center style1">View IIoT network Datasets Trained and Tested Results</p>
+                            <p align="center" class="text-uppercase pull-center style1"> Trained and Tested Results</p>
 
                             <hr>
                             <div>
@@ -31,8 +31,8 @@
                       </tr>
                             {% for object in objs %}
                       <tr>
-                                        <td bgcolor="#FFFFFF" style="color:rgb(12, 30, 147); font-size:20px; font-family:fantasy" ><div align="center">{{object.names}}</div></td>
-                                        <td bgcolor0a72ae" style="font-family:monospace; font-size:19px; "><div align="center" class="style9"><span class="style7">{{object.ratio}}</span></div></td>
+                                        <td bgcolor="#FFFFFF" style="color:rgb(12, 30, 147); font-size:15px; font-family:fantasy" ><div align="center">{{object.names}}</div></td>
+                                        <td bgcolor0a72ae" style="font-family:monospace; font-size:15px; "><div align="center" class="style9"><span class="style7">{{object.ratio}}</span></div></td>
                                  </tr>
 
                                         {% endfor %}
