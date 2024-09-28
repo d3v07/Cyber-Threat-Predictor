@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Service Provider</title>
+  <link href="https://fonts.googleapis.com/css?family=Spline Sans Mono" rel="stylesheet" />
+  <link rel="stylesheet" href="design1.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+  <h1 align="center" class="style1">
+    Cyber Threat Predictor
+  </h1>
+
+  <div class="topnav">
+    <a href="{% url 'train_model' %}">Train & Test Results</a>
+    <a href="{% url 'likeschart' 'bar' %}">View Trained and Tested Accuracy in Bar Chart
+    </a>
+    <a href="{% url 'charts1' 'line' %}">
+      View Trained and Tested Accuracy Results
+    </a>
+    <a href="{% url 'View_Prediction_Of_Cyber_Threat_Type' %}">View Prediction Of Cyber Threat Type</a>
+    <a href="{% url 'View_Cyber_Threat_Type_Ratio' %}">View Cyber Threat Type Ratio
+    </a>
+    <a href="{% url 'Download_Predicted_DataSets' %}">Download Predicted Data</a>
+    <a href="{% url 'charts' 'line' %}">View Cyber Threat Type Ratio Results
+    </a>
+    <a href="{% url 'View_Remote_Users' %}">View All Remote Users</a>
+    <a href="{% url 'login'  %}">Logout</a>
+  </div>
+
+  <div class="mainholder">{% block researchblock %} {% endblock %}</div>
+</body>
+
+</html>
