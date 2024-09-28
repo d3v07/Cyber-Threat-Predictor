@@ -1,0 +1,25 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="stylesheet" href="likeschart.css">
+
+<body>
+     <br>
+     <div class="topic">
+          <div class="sidemenu">
+
+               <h3 style="color:white;margin-left:60px;margin-top:100px;">&nbsp;</h3>
+               <h3 style="color:white;margin-left:60px;margin-top:100px;"><br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="{% url 'likeschart' 'bar' %}"></a>
+               </h3>
+          </div>
+          <div id="chartContainer" class="graph"></div>
+          <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+     </div>
+     <script src="likeschart.js"></script>
+</body>
+{% endblock %}
