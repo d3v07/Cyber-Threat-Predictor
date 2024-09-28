@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="charts1.css">
+</head>
+<body>
+    <br>
+    <div class="topic">
+    
+    
+    
+    <div class="sidemenu">
+        <h3 style="color:black;margin-left:60px;margin-top:80px"><a href="{% url 'charts1' 'pie' %}" >PIE CHART<br>
+            <br>
+            <br>
+            <br>
+          <br>
+         </a><a href="{% url 'charts1' 'line' %}">LINE CHART</a></h3>
+        <h3 style="color:white;margin-left:60px;margin-top:100px;"><a href="{% url 'charts1' 'spline' %}"></a></h3>
+    </div>
+    <div id="chartContainer" class="graph"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </div>
+    <script src="charts1.js"></script>
+    
+    </body>
+    
