@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `block_hunter`
+-- Database: `cyber_threat_predictor`
 --
-CREATE DATABASE IF NOT EXISTS `block_hunter` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `block_hunter`;
+CREATE DATABASE IF NOT EXISTS `cyber_threat_predictor` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `cyber_threat_predictor`;
 
 -- --------------------------------------------------------
 
