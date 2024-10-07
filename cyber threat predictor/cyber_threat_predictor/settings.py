@@ -70,7 +70,7 @@ WSGI_APPLICATION = 'cyber_threat_predictor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database',
+        'NAME': 'cyber_threat_predictor',
         'USER':'root',
         'PASSWORD': '',
         'HOST' :'127.0.0.1',
