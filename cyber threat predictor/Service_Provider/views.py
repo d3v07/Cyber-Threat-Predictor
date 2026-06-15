@@ -156,7 +156,7 @@ def train_model(request):
     NB = MultinomialNB()
     NB.fit(X_train, y_train)
     predict_nb = NB.predict(X_test)
-    naivebayes = (accuracy_score(y_test, predict_nb) * 100)+21
+    naivebayes = (accuracy_score(y_test, predict_nb) * 100)
     print("ACCURACY")
     print(naivebayes)
     print("CLASSIFICATION REPORT")
@@ -173,7 +173,7 @@ def train_model(request):
     lin_clf = svm.LinearSVC()
     lin_clf.fit(X_train, y_train)
     predict_svm = lin_clf.predict(X_test)
-    svm_acc = (accuracy_score(y_test, predict_svm) * 100)+21
+    svm_acc = (accuracy_score(y_test, predict_svm) * 100)
     print("ACCURACY")
     print(svm_acc)
     print("CLASSIFICATION REPORT")
@@ -189,12 +189,12 @@ def train_model(request):
     reg = LogisticRegression(random_state=0, solver='lbfgs').fit(X_train, y_train)
     y_pred = reg.predict(X_test)
     print("ACCURACY")
-    print((accuracy_score(y_test, y_pred) * 100)+20)
+    print((accuracy_score(y_test, y_pred) * 100))
     print("CLASSIFICATION REPORT")
     print(classification_report(y_test, y_pred))
     print("CONFUSION MATRIX")
     print(confusion_matrix(y_test, y_pred))
-    detection_accuracy.objects.create(names="Logistic Regression", ratio=(accuracy_score(y_test, y_pred) * 100)+21)
+    detection_accuracy.objects.create(names="Logistic Regression", ratio=(accuracy_score(y_test, y_pred) * 100))
 
     print("Extra Tree Classifier")
     from sklearn.tree import ExtraTreeClassifier
@@ -202,13 +202,13 @@ def train_model(request):
     etc_clf.fit(X_train, y_train)
     etcpredict = etc_clf.predict(X_test)
     print("ACCURACY")
-    print((accuracy_score(y_test, etcpredict) * 100)+25)
+    print((accuracy_score(y_test, etcpredict) * 100))
     print("CLASSIFICATION REPORT")
     print(classification_report(y_test, etcpredict))
     print("CONFUSION MATRIX")
     print(confusion_matrix(y_test, etcpredict))
     models.append(('Extra Tree Classifier', etc_clf))
-    detection_accuracy.objects.create(names="Extra Tree Classifier", ratio=(accuracy_score(y_test, etcpredict) * 100)+21)
+    detection_accuracy.objects.create(names="Extra Tree Classifier", ratio=(accuracy_score(y_test, etcpredict) * 100))
 
     labeled = 'Labled_data.csv'
     dataset.to_csv(labeled, index=False)
